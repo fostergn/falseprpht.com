@@ -25,7 +25,7 @@ $(function(){
 
     var video = elem.data('video');
     var videoId = videos[video];
-    var videoUrl = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&controls=0&showinfo=0&rel=0?modestbranding=1';
+    var videoUrl = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1';
 
     $('#video__frame').attr('src', videoUrl);
 
@@ -51,5 +51,9 @@ $(function(){
 
   }, 500)
 
+  setTimeout(function(){
+    $('.intro').removeClass('intro');
+
+  }, 4000)
 
 });
