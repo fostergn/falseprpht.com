@@ -10,6 +10,8 @@ $(function(){
     if (Number(localStorage.visitCount) > 1) {
 
       $('.intro').removeClass('intro');
+    } else {
+      $('body').addClass('intro');
     }
 
     if (localStorage.visitCount) {
