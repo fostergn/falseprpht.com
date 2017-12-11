@@ -58,6 +58,12 @@ $(function(){
 
   function scrollCenter() {
 
+    if (window.matchMedia('(max-width: 600px)').matches) {
+
+      $('html, body').scrollTop(9000);
+      return;
+    }
+
     var offsetNav = 75; //150;
     var centerOfVideo = (vendor.offset().top - offsetNav - ( $(window).height() - vendor.outerHeight(true) ) / 2);
 
