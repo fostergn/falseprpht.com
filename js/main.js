@@ -6,6 +6,22 @@ $(function(){
     'dmbh': '2CJihhJixc8'
   };
 
+  if (typeof(Storage) !== "undefined") {
+    if (Number(localStorage.visitCount) > 1) {
+
+      $('.intro').removeClass('intro');
+    }
+
+    if (localStorage.visitCount) {
+
+      localStorage.visitCount = Number(localStorage.visitCount) + 1;
+    } else {
+      localStorage.visitCount = 1
+    }
+  } else {
+      // Sorry! No Web Storage support..
+  }
+
   var vendor = $('.vendor');
   var main = $('main');
 
@@ -54,6 +70,6 @@ $(function(){
   setTimeout(function(){
     $('.intro').removeClass('intro');
 
-  }, 4000)
+  }, 3500)
 
 });
