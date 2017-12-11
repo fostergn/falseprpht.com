@@ -479,18 +479,24 @@ nav {
   padding: 16px;
   text-transform: uppercase;
   font-weight:800;
+  display:block;
 }
 
 .social a {
   padding-top:4px;
   display:block;
   position:relative;
+  width:auto;
 }
 .social a:first-child {
   padding-top:4px;
 }
 .social a:last-child {
   padding-bottom:4px;
+}
+
+.social a:nth-child(even) {
+    text-align: left;
 }
 
 .social a:hover:before {
@@ -587,4 +593,70 @@ nav:after {
 
 .intro #coming-soon {
   opacity:1;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    position:relative;
+  }
+
+  nav:after {
+    display:none;
+  }
+
+  .topbar__wrapper {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+      height: 100px;
+  }
+
+  .topbar__wrapper:before {
+    display:none;
+  }
+
+  main {
+    margin:0;
+    margin-bottom:100px;
+  }
+
+  .topbar__item.topbar__item--tbd:after {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+  }
+
+  .topbar__item:first-child {
+    border-left: 0px solid black;
+  }
+
+  #coming-soon {
+    display:none;
+  }
+
+  .sidebar__wrapper {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  .video__wrapper {
+    min-height:auto;
+  }
+
+  .social {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .social a {
+    width:50%;
+  }
+  .social a:nth-child(even) {
+      text-align: right;
+  }
 }
