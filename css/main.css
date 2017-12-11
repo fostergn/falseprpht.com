@@ -409,6 +409,7 @@ nav {
   opacity:0;
   transition: all .2s;
   cursor:pointer;
+  z-index:1;
 }
 .topbar__item .play:after {
   content:'';
